@@ -1,0 +1,83 @@
+.payment{
+    padding: 5rem 0;
+    &-methods{
+        @include d-flex;
+        &_item{
+            display: flex;
+            align-items: center;
+            color:$text-primary;
+            overflow-y: hidden;
+            border-right: $border-color; 
+            padding-right:2rem;
+            &:last-child{
+                border-right: unset;
+            }
+            cursor: pointer;
+            &:hover &-icon{
+                    .icon-1{
+                        top: 100%;
+                transition: all .3s ;
+                    }
+                    .icon-2{
+                        top: 0;
+                transition: all .3s ;
+                    }
+                    
+
+            }
+            &:hover &-desc{
+                
+                .title{
+                    color:$text-second;
+                }
+
+        }
+            &-icon{
+            height: 65px;
+            width: 65px;
+            overflow: hidden;
+            position: relative;
+
+                .icon-1{
+                    font-size: 3rem;
+                    margin-right: 1rem;
+                    position: absolute;
+                transition: all .3s ;
+                top: 0;
+                }
+                .icon-2{
+                    color: $text-second;
+                    font-size: 3rem;
+                    margin-right: 1rem;
+                    position: absolute;
+                transition: all .3s ;
+                top: -100%;
+                }
+            }
+           
+            &-desc{
+                .title{
+                    margin-bottom: .5rem;
+                }
+                .desc{
+                    color: $text-primary-light;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+@include responsive (576px){
+    .payment{
+        padding: 1rem 0 !important;
+        &-methods{
+            flex-direction: column;
+            &_item{
+                border-right: unset;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 2rem;
+            }
+        }
+    }
+}

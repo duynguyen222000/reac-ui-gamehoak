@@ -1,0 +1,167 @@
+.slider-carousel{
+    overflow: hidden;
+    width: 100%;
+    .slick-arrow.slick-prev{
+        z-index: 99;
+       
+    }
+    .slick-prev{
+        left: 20px;
+        &:hover{
+           
+            &::before{
+                transition: all .5s;
+                color: $text-second;
+            }
+        }
+    }
+    .slick-arrow{
+        right: 40px;
+        &:hover{
+            &::before{
+                color: $text-second;
+                transition: all .5s;
+            }
+        }
+    }
+    .slick-prev:before, .slick-next:before {
+        font-family: "slick";
+        font-size: 40px;
+        line-height: 1;
+        opacity: 0.75;
+        color: $text-primary;
+        -webkit-font-smoothing: antialiased;
+        transition: all .5s;
+       
+    }
+    .slider-main{
+        position: relative;
+        .slide-block{
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            max-width: 500px;
+            z-index: 99;
+            .title{
+                display: inline-block;
+                color:$text-th;
+                font-size: 2rem;
+                font-weight: 600;
+                padding: .5rem 2.5rem;
+                background: $text-second;
+                border-top-left-radius: 90px;
+                border-bottom-right-radius: 90px;
+                
+            }
+            .heading{
+                font-size: 3.8rem;
+                color:$text-primary;
+                font-weight: 700;
+                margin: 1.5rem 0;
+                
+            }
+        }
+    }
+ 
+}
+@include responsive(576px){
+    .slider-carousel{
+        .slider-main{
+            img{
+                height: 500px;
+                object-fit: cover;
+            }
+        .slide-block{
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translateY(-50%);
+            max-width: 500px;
+            z-index: 99;
+            text-align: center;
+            .title{
+                font-size: .8rem;
+                padding: .5rem 1.5rem;
+                border-radius: unset;
+            }
+            .heading{
+                font-size: 2.5rem;
+                color:$text-primary;
+                font-weight: 700;
+                margin: 2.5rem 0;
+                
+            }
+        }
+    }
+    }
+    
+}
+@include responsive(768px){
+ 
+    .slider-carousel{
+        .slider-main{
+            position: relative;
+            .slide-block{
+                position: absolute;
+                top: 50%;
+                left: 10%;
+                transform: translateY(-50%);
+                max-width: 500px;
+                z-index: 99;
+                .title{
+                    display: inline-block;
+                    color:$text-th;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    padding: .5rem 2.5rem;
+                    background: $text-second;
+                    border-top-left-radius: 90px;
+                    border-bottom-right-radius: 90px;
+                    
+                }
+                .heading{
+                    font-size: 2.5rem;
+                    color:$text-primary;
+                    font-weight: 700;
+                    margin: 1.5rem 0;
+                    
+                }
+            }
+        }
+    }
+}
+@include responsive(992px){
+ 
+    .slider-carousel{
+        .slider-main{
+            position: relative;
+            .slide-block{
+                position: absolute;
+                top: 50%;
+                left: 10%;
+                transform: translateY(-50%);
+                max-width: 500px;
+                z-index: 99;
+                .title{
+                    display: inline-block;
+                    color:$text-th;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    padding: .5rem 2.5rem;
+                    background: $text-second;
+                    border-top-left-radius: 90px;
+                    border-bottom-right-radius: 90px;
+                    
+                }
+                .heading{
+                    font-size: 2.5rem;
+                    color:$text-primary;
+                    font-weight: 700;
+                    margin: 1.5rem 0;
+                    
+                }
+            }
+        }
+    }
+}

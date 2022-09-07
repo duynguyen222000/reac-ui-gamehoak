@@ -1,0 +1,19 @@
+// variable + mixins + function
+@import  './helpers/variable';
+@import  './helpers/reset';
+
+//always include variable 1st
+@import './helpers/mixin';
+// base
+@import './base/typography';
+// layout
+@import './layout/common';
+@import './layout/header';
+@import './components/button';
+@import './components/payment';
+// components
+// 
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+@import './components/sliderCarousel';

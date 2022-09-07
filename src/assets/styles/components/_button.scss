@@ -1,0 +1,14 @@
+.btn{
+    display: inline-block;
+    padding: .5rem 1rem;
+    background-color: $text-primary;
+    border: 1px solid $text-primary;
+    font-weight: 600;
+    transition: all .4s;
+    &:hover{
+        background-color: $text-second;
+        transition: all .4s;
+    color:$text-primary;
+    border: 1px solid $text-primary;
+}
+}

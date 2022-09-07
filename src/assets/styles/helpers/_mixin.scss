@@ -1,0 +1,24 @@
+@mixin d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin hover{
+    cursor: pointer;
+    &:hover{
+        color:$text-second;
+    }
+}
+@mixin responsive($point) {
+    @media only screen and (max-width:$point) {
+        @content
+    }
+    
+}
