@@ -27,6 +27,7 @@ header{
                     position: absolute;
                     width: 100%;
                     top: 100%;
+                    right: 0;
                     border:$border-color;
                     z-index: 9;
                     overflow: hidden;
@@ -71,6 +72,7 @@ header{
         background-color: $bg-color;
         @include d-flex;
         padding: 1.2rem 0;
+        // position: relative;
        
         &-bars{
             display: none;
@@ -93,6 +95,26 @@ header{
             .spacing{
                 padding: 0 1rem;
                 @include hover
+            }
+            &__search{
+                position: relative;
+                .search-input{
+                    position: absolute;
+                    width: 220px;
+                    z-index: 9;
+                    top: 48px;
+                    right: 0;
+                    background-color: $bg-color;
+                    border: $border-color;
+                    padding: .2rem;
+                    input{
+                        border: none;
+                        background-color: $bg-color;
+                        outline: none;
+                        color: $text-primary;
+                        padding: 0.5rem;
+                    }
+                }
             }
             &__cart{
                 .cart-color{

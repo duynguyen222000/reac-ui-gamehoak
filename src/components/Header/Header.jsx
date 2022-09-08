@@ -7,6 +7,7 @@ import {
   FaCartPlus,
   FaUserAlt,
   FaBars,
+  FaTimes,
 } from "react-icons/fa";
 import { ImCancelCircle } from "react-icons/im";
 import logo from "../../assets/img/logo.png";
@@ -14,6 +15,7 @@ export const Header = () => {
   const [show, setShow] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [fixed, setFixed] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   useEffect(() => {
     const getHeight = () => {
       if (window.scrollY > 180) {
@@ -118,7 +120,28 @@ export const Header = () => {
               </ul>
               <div className="header_main-user">
                 <div className="header_main-user__search spacing">
-                  <FaSearch />
+                  {showSearch ? (
+                    <FaTimes
+                      onClick={() => {
+                        setShowSearch(!showSearch);
+                      }}
+                    />
+                  ) : (
+                    <FaSearch
+                      onClick={() => {
+                        setShowSearch(!showSearch);
+                      }}
+                    />
+                  )}
+
+                  {showSearch ? (
+                    <div className="search-input">
+                      <input placeholder="search..." type="text" />
+                      <FaSearch />
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="header_main-user__account spacing">
                   <FaUserAlt />
