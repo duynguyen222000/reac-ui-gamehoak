@@ -73,11 +73,48 @@
         &-methods{
             flex-direction: column;
             &_item{
+                border-right: unset !important;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 2rem;
+                padding-right: unset;
+                 &-icon{
+                border-right: unset !important;
+                width: 100%;
+                @include flex-center;
+                
+            }
+            }
+          
+        }
+    }
+}
+@include responsive (768px){
+    .payment{
+        padding: 1rem 0 !important;
+        &-methods{
+            &_item{
                 border-right: unset;
                 flex-direction: column;
                 text-align: center;
                 margin-top: 2rem;
                 padding-right: unset;
+                &:last-child &-icon{
+                   border: unset;
+
+                }
+                &-icon{
+                    border-right: $border-color;
+                    width: 100%;
+                    @include flex-center;
+                    
+                }
+                &-desc{
+                    
+                    .desc{
+                        font-size: .8rem;
+                    }
+                }
             }
         }
     }

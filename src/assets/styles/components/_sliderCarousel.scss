@@ -2,7 +2,7 @@
     overflow: hidden;
     width: 100%;
     .slick-arrow.slick-prev{
-        z-index: 99;
+        z-index: 9;
        
     }
     .slick-prev{
@@ -75,7 +75,7 @@
         .slide-block{
             position: absolute;
             top: 50%;
-            left: 0%;
+            left: 0% !important;
             transform: translateY(-50%);
             max-width: 500px;
             z-index: 99;

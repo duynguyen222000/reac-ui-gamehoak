@@ -1,0 +1,201 @@
+.discount-banner{
+    margin: 2rem 0;
+    .list-banner{
+        display: flex;
+        align-items: center;
+        margin: 0 -15px;
+        .banner{
+            position: relative;
+            width: 50%;
+            height: 350px;
+            padding: 0 15px;
+            overflow: hidden;
+            cursor: pointer;
+            &:hover {
+                .banner_img{
+                    img{
+                        transform: scale(1.2);
+                        transition: 5s;
+                    }
+                }
+               
+            }
+            &_img{
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                &:hover::before{
+                    top: 200px;
+                    left: 200px;
+                    transition: 2s;
+                }
+                &::before{
+                    content: "";
+                    top: -500px;
+                    left: -510px;
+                    position: absolute;
+                    width: 180%;
+                    height: 100%;
+                    background-image: linear-gradient(rgba(255, 255, 255, 0.384),rgba(255, 255, 255, 0));
+                    transform: rotate(140deg);
+                    z-index: 9;
+
+                }
+               
+                img{
+                    transition: 5s;
+                    height: 100%;
+                }
+            }
+            &_content{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 50%;
+                z-index: 99;
+                width: 50%;
+                &-title{
+                    p{
+                        color: $text-th;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        background-color: $text-second;
+                        display: inline-block;
+                        padding: .2rem .5rem;
+                        margin-left: 18px;
+                        margin-bottom: 1rem;
+                        position: relative;
+                        font-style: italic;
+                        &::after{
+                            content: "";
+                            border-right: 0px solid #f9aa01;
+                            border-bottom: 38px solid #f9aa01;
+                            border-left: 18px solid transparent;
+                            border-top: 18px solid transparent;
+                            position: absolute;
+                            left: -18px;
+                            top: -17px;
+                        }
+                        &::before{
+                            content: "";
+                            border-right: 17px solid transparent;
+                            border-bottom: 17px solid transparent;
+                            border-left: 0px solid #f9aa01;
+                            border-top: 38px solid #f9aa01;
+                            position: absolute;
+                            right: -17px;
+                            top: 0px;
+                        }
+
+
+                    }
+                }
+                &-heading{
+                    p{
+                        font-weight: 700;
+                        color: $text-primary;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive(576px){
+    .discount-banner{
+        .list-banner{
+            flex-direction: column;
+            gap: 15px 0;
+            .banner{
+                width: 100%;
+                height: auto;
+                &_content{
+                    width: 40%;
+                    &-title{
+                        p{
+                            font-size: 1rem;
+                            &::after{
+                                border-bottom: 27px solid #f9aa01 !important
+                             
+                            }
+                            &::before{
+                                border-top: 27px solid #f9aa01;
+                             
+                            }
+                        }
+                    }
+                    &-heading{
+                        p{
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive(768px){
+    .discount-banner{
+        .list-banner{
+            flex-direction: column;
+            gap: 15px 0;
+            .banner{
+                width: 100%;
+                height: auto;
+                &_content{
+                    width: 40%;
+                    &-title{
+                        p{
+                            font-size: 1rem;
+                            &::after{
+                                border-bottom: 28px solid #f9aa01 !important
+                             
+                            }
+                            &::before{
+                                border-top: 28px solid #f9aa01;
+                             
+                            }
+                        }
+                    }
+                    &-heading{
+                        p{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive(992px){
+    .discount-banner{
+        .list-banner{
+            .banner{
+                width: 100%;
+                height: auto;
+                &_content{
+                    width: 40%;
+                    &-title{
+                        p{
+                            font-size: 1rem;
+                            &::after{
+                                border-bottom: 28px solid #f9aa01 !important
+                             
+                            }
+                            &::before{
+                                border-top: 28px solid #f9aa01;
+                             
+                            }
+                        }
+                    }
+                    &-heading{
+                        p{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
