@@ -5,6 +5,7 @@ import { SliderCarousel } from "./components/Slider/Slider";
 import bannergame01 from "./assets/img/bannergame01.jpg";
 import bannergame02 from "./assets/img/bannergame02.jpg";
 import { Category } from "./components/Category/Category";
+import { OutProduct } from "./components/Products/OutProduct";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <Payment />
       <DiscountBanner img={{ bannergame01, bannergame02 }} />
       <Category />
+      <OutProduct />
     </div>
   );
 }

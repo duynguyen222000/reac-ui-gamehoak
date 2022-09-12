@@ -1,0 +1,109 @@
+.slide-product{
+    margin: 3rem -15px;
+
+}
+.slick-slider{
+    &:hover{
+        .slick-prev,.slick-arrow{
+            visibility: visible;
+           &::before{
+          color: $text-second;
+          font-size: 2rem;
+           }
+        }
+    }
+}
+.slick-prev{
+    left: 0px;
+    z-index: 9;
+    visibility: hidden;
+}
+.slick-arrow{
+    right: 7px;
+    z-index: 9;
+    visibility: hidden;
+}
+// ourr product
+.ourproduct{
+    margin: 2rem 0;
+    h2{
+        color: $text-primary;
+        font-size: 3rem;
+        text-align: center;
+        position: relative;
+        padding-bottom: 1rem;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: $text-second;
+        }
+    }
+}
+// 
+
+.product-item{
+    padding: 0 15px;
+    color: $text-primary;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    &:hover &_cart{
+        transform: translateY(0);
+        visibility: visible;
+        transition: .7s  ease-in-out;
+    }
+    &_img{
+        width: 100%;
+        height: 270px;
+        cursor: pointer;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &_infor{
+        background-color: $bg-color-th;
+        padding: 1rem;
+        &-rate{
+            color: $text-second;
+        }
+        &-name{
+            padding: .5rem 0;
+        }
+        &-price{
+            color: $text-second;
+        }
+    }
+    &_cart{
+        position: absolute;
+        bottom: 0;
+        @include d-flex;
+        width: calc(100% - 30px);
+        transform: translateY(100%);
+        visibility: hidden;
+        transition: .7s  ease-in-out;
+
+
+        &-icon{
+            flex-grow: 1;
+            text-align: center;
+            border-right: 1px solid $text-primary-light;
+            border-top: 1px solid $text-primary-light;
+            padding: .4rem 0;
+            background-color: $bg-color-th;
+            cursor: pointer;
+            &:hover{
+                color: $text-second;
+            }
+        }
+        &-icon:last-child{
+            border-right: unset;
+        }
+    }
+}

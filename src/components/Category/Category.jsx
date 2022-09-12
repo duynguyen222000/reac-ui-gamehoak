@@ -6,12 +6,14 @@ import cate03 from "../../assets/img/cate03.jpg";
 export const Category = () => {
   var settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 4,
     initialSlide: 0,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -61,7 +63,7 @@ export const Category = () => {
               <img src={cate02} alt="" />
             </div>
             <div className="slide-item_content">
-              <p className="slide-item_content-name">Batman</p>
+              <p className="slide-item_content-name">Bayonetta</p>
               <a href="">Shop Now</a>
             </div>
           </div>
@@ -70,7 +72,7 @@ export const Category = () => {
               <img src={cate03} alt="" />
             </div>
             <div className="slide-item_content">
-              <p className="slide-item_content-name">Batman</p>
+              <p className="slide-item_content-name">Dark Souls</p>
               <a href="">Shop Now</a>
             </div>
           </div>
