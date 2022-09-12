@@ -2,27 +2,7 @@
     margin: 3rem -15px;
 
 }
-.slick-slider{
-    &:hover{
-        .slick-prev,.slick-arrow{
-            visibility: visible;
-           &::before{
-          color: $text-second;
-          font-size: 2rem;
-           }
-        }
-    }
-}
-.slick-prev{
-    left: 0px;
-    z-index: 9;
-    visibility: hidden;
-}
-.slick-arrow{
-    right: 7px;
-    z-index: 9;
-    visibility: hidden;
-}
+
 // ourr product
 .ourproduct{
     margin: 2rem 0;
@@ -42,6 +22,27 @@
             height: 3px;
             background-color: $text-second;
         }
+    }
+    .slick-slider{
+        &:hover{
+            .slick-prev,.slick-arrow{
+                visibility: visible;
+               &::before{
+              color: $text-second;
+              font-size: 2rem;
+               }
+            }
+        }
+    }
+    .slick-prev{
+        left: 0px;
+        z-index: 9;
+        visibility: hidden;
+    }
+    .slick-arrow{
+        right: 7px;
+        z-index: 9;
+        visibility: hidden;
     }
 }
 // 

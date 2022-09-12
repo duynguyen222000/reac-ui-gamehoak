@@ -9,14 +9,16 @@
 // layout
 @import './layout/common';
 @import './layout/header';
-@import './components/button';
-@import './components/payment';
+@import './layout/footer';
 // components
-// 
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 
+@import './components/button';
+@import './components/payment';
 @import './components/sliderCarousel';
 @import './components/discountbanner';
 @import './components/category';
-@import './components/product'
+@import './components/product';
+@import './components/member';
+@import './components/logoslide'

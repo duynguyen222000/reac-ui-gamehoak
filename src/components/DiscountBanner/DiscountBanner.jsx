@@ -1,6 +1,6 @@
 import React from "react";
 export const DiscountBanner = (props) => {
-  const { bannergame01, bannergame02 } = props.img;
+  const { img1, img2 } = props;
 
   return (
     <div className="discount-banner">
@@ -8,7 +8,7 @@ export const DiscountBanner = (props) => {
         <div className="list-banner">
           <div className="banner list-banner_fisrt">
             <div className="banner_img">
-              <img src={bannergame02} alt="" />
+              <img src={img1} alt="" />
             </div>
             <div className="banner_content">
               <div className="banner_content-title">
@@ -21,7 +21,7 @@ export const DiscountBanner = (props) => {
           </div>
           <div className="banner list-banner_fisrt">
             <div className="banner_img">
-              <img src={bannergame01} alt="" />
+              <img src={img2} alt="" />
             </div>
             <div className="banner_content">
               <div className="banner_content-title">

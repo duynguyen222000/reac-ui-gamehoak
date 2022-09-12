@@ -7,7 +7,7 @@ import { IoBagHandleSharp, IoHeart, IoEyeSharp } from "react-icons/io5";
 import { ImEnlarge } from "react-icons/im";
 export const Product = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,

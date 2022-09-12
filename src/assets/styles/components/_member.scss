@@ -1,0 +1,44 @@
+.member{
+    margin: 5rem 0;
+    padding: 3rem 0;
+    .member-item{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap:2rem 0;
+       padding: 3rem 0;
+       &_avatar{
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        img{
+            border: 2px solid $text-second;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    &_infor{
+        color: $text-primary;
+        span{
+            color: $text-second;
+        }
+    }
+    &_desc{
+        color: $text-primary-light;
+    }
+    }
+    .slick-dots{
+        bottom: 0 !important;
+        .slick-active button::before{
+            color: $text-second;
+        }
+        button{
+            &::before{
+                font-size: 1rem;
+                color: $text-primary;
+            }
+        }
+    }
+}

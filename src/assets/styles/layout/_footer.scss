@@ -1,0 +1,92 @@
+footer{
+    .footer-top{
+        display: flex;
+        justify-content: space-between;
+        padding: 10rem 0;
+        .w-25{
+            width: 25%;
+        }
+        &_address{ 
+            &-heading{
+                color: $text-primary;
+                font-size: 1.2rem;
+                font-weight: 700;
+            } 
+            span{
+                color: $text-second;
+                margin-right: .5rem;
+            }
+        }
+        .title{
+                 color: $text-primary-light;
+                 padding: .5rem 0;
+                 &:hover{
+                    color: $text-second;
+                 }
+             }
+       .heading{
+        color: $text-primary;
+        padding-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        width: 100%;
+        @include d-flex;
+       }
+       &_contact{
+
+        &-input{
+            position: relative;
+            margin: 1rem 0;
+            input{
+                outline: none;
+                padding: .8rem .5rem;
+                width: 100%;
+            }
+            .icon-send{
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                @include flex-center;
+                font-size: 1.5rem;
+                cursor: pointer;
+                &:hover{
+                    color: $text-second
+                }
+            }
+        }
+        &-icon{
+            display: flex;
+            .icon-item{
+                color: $text-primary;
+                font-size: 1.5rem;
+                cursor: pointer;
+                padding-right: 1rem;
+                &:hover{
+                    color: $text-second;
+                }
+            }
+        }
+       }
+    }
+}
+@include responsive(576px){
+    
+    .footer-top{
+        flex-direction: column;
+        padding: 5rem 0;
+        .w-25{
+            width: 100% !important;
+        }
+    }
+}
+@include responsive(1024px){
+    
+    .footer-top{
+        flex-direction: column;
+        padding: 5rem 0;
+        .w-25{
+            width: 100% !important;
+        }
+    }
+}
