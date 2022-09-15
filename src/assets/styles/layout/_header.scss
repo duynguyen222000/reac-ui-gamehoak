@@ -61,6 +61,7 @@ header{
    .header_main-bottom{
     background-color: $bg-color;
     z-index: 999;
+    border-bottom: $border-color;
     &.fixed{
         position: fixed;
         top: 0;

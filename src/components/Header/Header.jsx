@@ -10,6 +10,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { ImCancelCircle } from "react-icons/im";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 export const Header = () => {
   const [show, setShow] = useState(false);
@@ -88,7 +89,9 @@ export const Header = () => {
                 <FaBars />
               </div>
               <div className="header_main-logo">
-                <img src={logo} alt="" />
+                <NavLink to="/">
+                  <img src={logo} alt="" />
+                </NavLink>
               </div>
               <ul className={`header_main-nav ${showNav ? "show" : "hide"}`}>
                 <li
@@ -100,22 +103,70 @@ export const Header = () => {
                   <ImCancelCircle />
                 </li>
                 <li>
-                  <a href="">Home</a>
+                  <NavLink
+                    onClick={() => {
+                      setShowNav(false);
+                    }}
+                    active
+                    to="home"
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="">Shop</a>
+                  <NavLink
+                    onClick={() => {
+                      setShowNav(false);
+                    }}
+                    active
+                    to="shop"
+                  >
+                    Shop
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="">Blog</a>
+                  <NavLink
+                    onClick={() => {
+                      setShowNav(false);
+                    }}
+                    active
+                    to="blog"
+                  >
+                    Blog
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="">Media</a>
+                  <NavLink
+                    onClick={() => {
+                      setShowNav(false);
+                    }}
+                    active
+                    to="media"
+                  >
+                    Media
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="">ShortCode</a>
+                  <NavLink
+                    onClick={() => {
+                      setShowNav(false);
+                    }}
+                    active
+                    to="shortcode"
+                  >
+                    ShortCode
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="">Features</a>
+                  <NavLink
+                    onClick={() => {
+                      setShowNav(false);
+                    }}
+                    active
+                    to="feature"
+                  >
+                    Features
+                  </NavLink>
                 </li>
               </ul>
               <div className="header_main-user">

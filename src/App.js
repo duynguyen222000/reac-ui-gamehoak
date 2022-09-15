@@ -1,31 +1,28 @@
-import { DiscountBanner } from "./components/DiscountBanner/DiscountBanner";
-import { Header } from "./components/Header/Header";
-import { Payment } from "./components/Payment/Payment";
-import { SliderCarousel } from "./components/Slider/Slider";
-import bannergame01 from "./assets/img/bannergame01.jpg";
-import bannergame02 from "./assets/img/bannergame02.jpg";
-import bannergame03 from "./assets/img/bannergame03.jpg";
-import bannergame04 from "./assets/img/bannergame04.jpg";
-import { Category } from "./components/Category/Category";
-import { OutProduct } from "./components/Products/OutProduct";
-import { DearDay } from "./components/Products/DearDay";
-import { Member } from "./components/Member/Member";
-import { LogoSlide } from "./components/LogoSlide/LogoSlide";
-import { Footer } from "./components/Footer/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BlogPage } from "./pages/BlogPage/BlogPage";
+import { FeaturePage } from "./pages/Featurepage/FeaturePage";
+import { Homepage } from "./pages/HomePage/Homepage";
+import { MediaPage } from "./pages/MediaPage/MediaPage";
+import { ShopPage } from "./pages/ShopPage/ShopPage";
+import { ShortCodePage } from "./pages/ShortCodePage/ShortCodePage";
+import { HomeTemplate } from "./theme/HomeTemplate/HomeTemplate";
+
 function App() {
   return (
     <div className="App">
-      <Header />
-      <SliderCarousel />
-      <Payment />
-      <DiscountBanner img1={bannergame01} img2={bannergame02} />
-      <Category />
-      <OutProduct />
-      <DiscountBanner img1={bannergame03} img2={bannergame04} />
-      <DearDay />
-      <Member />
-      <LogoSlide />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeTemplate />}>
+            <Route index element={<Homepage />} />
+            <Route path="home" element={<Homepage />} />
+            <Route path="shop" element={<ShopPage />} />
+            <Route path="blog" element={<BlogPage />} />
+            <Route path="media" element={<MediaPage />} />
+            <Route path="shortcode" element={<ShortCodePage />} />
+            <Route path="feature" element={<FeaturePage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

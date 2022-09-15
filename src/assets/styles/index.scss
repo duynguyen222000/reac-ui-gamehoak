@@ -1,7 +1,7 @@
 // variable + mixins + function
 @import  './helpers/variable';
 @import  './helpers/reset';
-
+@import './components/app';
 //always include variable 1st
 @import './helpers/mixin';
 // base
@@ -21,4 +21,9 @@
 @import './components/category';
 @import './components/product';
 @import './components/member';
-@import './components/logoslide'
+@import './components/logoslide';
+
+
+
+// import pages
+@import './pages/shoppage';
