@@ -1,4 +1,7 @@
 // variable + mixins + function
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import  './helpers/variable';
 @import  './helpers/reset';
 @import './components/app';

@@ -10,13 +10,14 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { ImCancelCircle } from "react-icons/im";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 export const Header = () => {
   const [show, setShow] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [fixed, setFixed] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
   useEffect(() => {
     const getHeight = () => {
       if (window.scrollY > 180) {
@@ -195,7 +196,21 @@ export const Header = () => {
                   )}
                 </div>
                 <div className="header_main-user__account spacing">
-                  <FaUserAlt />
+                  <FaUserAlt
+                    onClick={() => {
+                      setShowLogin(!showLogin);
+                    }}
+                  />
+                  {!showLogin || (
+                    <div className="account">
+                      <div className="login">
+                        <Link to="login">Login</Link>
+                      </div>
+                      <div className="register">
+                        <Link to="register">Register</Link>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className="header_main-user__cart spacing">
                   <FaCartPlus />{" "}

@@ -93,9 +93,34 @@ header{
         // header cart,search
         &-user{
             @include d-flex;
+          
             .spacing{
                 padding: 0 1rem;
-                @include hover
+                
+            }
+            &__account{
+                cursor: pointer;
+                &:hover{
+                    svg{
+                        fill: $text-second;
+                    }
+                }
+                
+                position: relative;
+            
+                .account{
+                    width: 130px;
+                    top: 50px;
+                    right: 0;
+                    position: absolute;
+                    background-color: $bg-color;
+                    border: $border-color;
+                    z-index: 999;
+                    a{
+                        padding: .5rem 1rem;
+                        @include hover
+                    }
+                }
             }
             &__search{
                 position: relative;
@@ -118,6 +143,9 @@ header{
                 }
             }
             &__cart{
+                svg{
+                    display: inline-block;
+                }
                 .cart-color{
                     color:$text-second;
                 }
