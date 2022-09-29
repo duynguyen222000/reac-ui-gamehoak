@@ -6,13 +6,9 @@ export const LoginPage = () => {
     <div className="container flex justify-center">
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:text-gray-100">
         <h1 className="text-2xl font-bold text-center">Login</h1>
-        <form
-          novalidate=""
-          action=""
-          className="space-y-6 ng-untouched ng-pristine ng-valid"
-        >
+        <form action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
           <div className="space-y-1 text-sm">
-            <label for="username" className="block dark:text-gray-400">
+            <label htmlFor="username" className="block dark:text-gray-400">
               Username
             </label>
             <input
@@ -24,7 +20,7 @@ export const LoginPage = () => {
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label for="password" className="block dark:text-gray-400">
+            <label htmlFor="password" className="block dark:text-gray-400">
               Password
             </label>
             <input

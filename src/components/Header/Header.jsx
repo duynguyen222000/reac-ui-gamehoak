@@ -108,7 +108,7 @@ export const Header = () => {
                     onClick={() => {
                       setShowNav(false);
                     }}
-                    active
+                    active="true"
                     to="home"
                   >
                     Home
@@ -119,7 +119,7 @@ export const Header = () => {
                     onClick={() => {
                       setShowNav(false);
                     }}
-                    active
+                    active="true"
                     to="shop"
                   >
                     Shop
@@ -130,7 +130,7 @@ export const Header = () => {
                     onClick={() => {
                       setShowNav(false);
                     }}
-                    active
+                    active="true"
                     to="blog"
                   >
                     Blog
@@ -141,7 +141,7 @@ export const Header = () => {
                     onClick={() => {
                       setShowNav(false);
                     }}
-                    active
+                    active="true"
                     to="media"
                   >
                     Media
@@ -152,7 +152,7 @@ export const Header = () => {
                     onClick={() => {
                       setShowNav(false);
                     }}
-                    active
+                    active="true"
                     to="shortcode"
                   >
                     ShortCode
@@ -163,7 +163,7 @@ export const Header = () => {
                     onClick={() => {
                       setShowNav(false);
                     }}
-                    active
+                    active="true"
                     to="feature"
                   >
                     Features
